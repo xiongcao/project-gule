@@ -4,7 +4,7 @@ var sass = require('gulp-sass');
 var minifycss = require('gulp-minify-css');//压缩css插件
 var cleancss = require('gulp-clean-css');//压缩css插件
  
-//定义一个testLess任务（自定义任务名称）
+//定义一个sass任务（自定义任务名称）
 gulp.task('sass', function () {
     gulp.src('./sass/**/*.scss') //该任务针对的文件
         .pipe(sass()) //该任务调用的模块
@@ -18,7 +18,7 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./css')); //将会在css文件夹下生成index.css（复制文件目录及文件）
 });
  
-gulp.task('default',['sass']); //定义默认任务 elseTask为其他任务，该示例没有定义elseTask任务
+gulp.task('default',['sass']); //定义默认任务
  
 //gulp.task(name[, deps], fn) 定义任务  name：任务名称 deps：依赖任务名称 fn：回调函数
 //gulp.src(globs[, options]) 执行任务处理的文件  globs：处理的文件路径(字符串或者字符串数组) 
