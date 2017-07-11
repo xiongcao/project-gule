@@ -1,5 +1,5 @@
 require("jquery",function($){
-    $(function(){
+    $(()=>{
         let html = 
         `<div class="render">
             <ul>
@@ -10,4 +10,6 @@ require("jquery",function($){
         </div>`;
         $("main").append(html);
     })
+
+
 })

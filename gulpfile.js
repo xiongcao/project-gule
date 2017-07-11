@@ -3,6 +3,7 @@ var gulp = require('gulp'); //本地安装gulp所用到的地方
 var sass = require('gulp-sass');
 var minifycss = require('gulp-minify-css');//压缩css插件
 var cleancss = require('gulp-clean-css');//压缩css插件
+var livereload = require('gulp-livereload');//监听文件发生变化时，浏览器自动刷新页面
  
 //定义一个sass任务（自定义任务名称）
 gulp.task('sass', function () {
@@ -15,7 +16,12 @@ gulp.task('sass', function () {
             keepSpecialComments: '*'
             //保留所有特殊前缀 当你用autoprefixer生成的浏览器前缀，如果不加这个参数，有可能将会删除你的部分前缀
         }))
-        .pipe(gulp.dest('./css')); //将会在css文件夹下生成index.css（复制文件目录及文件）
+        .pipe(gulp.dest('./css')) //将会在css文件夹下生成index.css（复制文件目录及文件）
+        .pipe(livereload());//监听文件发生变化时，浏览器自动刷新页面
+});
+
+gulp.task('auto', function () {
+    gulp.watch('./sass/**/*.scss', ['sass']);
 });
  
 gulp.task('default',['sass']); //定义默认任务
