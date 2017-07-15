@@ -1,6 +1,4 @@
 require(["jquery"],function($){
-    //我是注释
-    //这里运用的是ES6语法
     $(()=>{
         let test = ()=>{
             let html = 
@@ -13,6 +11,5 @@ require(["jquery"],function($){
                 </div>`;
                 $("main").append(html);
         }
-        
     })
 })

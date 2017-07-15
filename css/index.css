@@ -1,1 +1,1 @@
-.main{width:500px;height:300px;border:1px solid red}.main .parent{width:300px;height:300px;border:1px solid #000}.main .parent .child{width:100px;height:100px;background:green}
+@charset "UTF-8";.class,.main .parent:hover{font-size:12px}.main{color:#1875e7;background:url(http://image.beekka.com/blog/201206/bg2012061901.jpg);border:1px solid red}.main .parent{margin-left:30px}.main .parent:hover{cursor:pointer}.main .parent select{width:100px;-webkit-appearance:none;-moz-appearance:none;appearance:none}
